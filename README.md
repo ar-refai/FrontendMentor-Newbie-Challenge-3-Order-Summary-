@@ -1,2 +1,3 @@
-# FrontendMentor-Newbie-Challenge-3-Order-Summary-
-Designing Order Summary Card With Responsive Feature Using HTML , CSS
+# Frontend Mentor - Order summary card
+
+![Design preview for the Order summary card coding challenge](./design/desktop-preview.jpg)

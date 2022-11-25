@@ -1,0 +1,163 @@
+/* the general styling of the page */
+:root {
+    --blue1:#e0e8ff;    /*Pale blue*/
+    --blue2:#3829e0;    /*Bright blue*/
+    --blue3:#f5f7ff;    /*Very pale blue*/
+    --blue4:#7280a7;     /*Desaturated blue*/
+    --blue5:#1f2f56;     /*Dark blue*/
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: myPageFont;
+    src: url(font/RedHatDisplay-VariableFont_wght.ttf);
+}
+body {
+    font-size: 16px;
+    height: 100vh;
+    font-family: myPageFont,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+.bg {
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    height:100%;
+    width:100%;
+    background-color:#d6e1ff;
+}
+/* order styling */
+.order {
+    width:350px;
+    padding:80px 0;
+    margin: auto;
+    text-align: center;
+    
+}
+.order-card {
+    background-color:#ffffff ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 4px #ccc;
+}
+.order-card .order-img img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+.order-card > div:not(:first-of-type) {
+    padding:0 40px;
+}  
+/* order info styling */
+.order-info h1{
+    font-size: 30px;
+    font-weight: 900;
+    padding-top:20px;
+}
+.order-info p {
+    width: 90%;
+    margin: auto;
+    padding:20px 0;
+    font-size: 16px;
+    opacity: .7;
+}
+/* order price styling */
+.order-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue3);
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    padding:20px !important;
+
+}
+/* .order-price img {
+
+} */
+.order-price {
+    position: relative;
+}
+.order-price p:first-of-type {
+    font-weight: 900;
+    font-size: 16px;
+    position:absolute;
+    top:20px;
+    left: 90px;
+}
+.order-price p:nth-of-type(2) {
+    opacity: .7;
+    position:absolute;
+    left: 90px;
+}
+.order-price a{
+    font-weight: 700;
+    transition:all .2s ease;
+}
+.order-price a:hover{
+    color:var(--blue2);
+    text-decoration: none;
+    opacity:.7;
+}
+/* price buttons */
+.order-btns {
+    width: 90%;
+    margin:30px auto;
+    padding:0 !important;
+}
+.order-btns button {
+    display: block;
+    width:100%;
+    padding:20px;
+    font-size: 18px;
+    color:var(--blue3);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.order-btns button:first-child {
+    background-color: var(--blue2);
+    transition:all .2s ease;
+}
+.order-btns button:first-child:hover {
+    background-color: var(--blue2);
+    opacity: .8;
+    transition:all .2s ease;
+}
+.order-btns button:nth-child(2){
+    background-color:transparent;
+    opacity: .7;
+    font-weight: 600;
+    color:#000000;
+}
+.order-btns button:nth-child(2):hover {
+    opacity: 1;
+}
+/* responsive web page */
+@media only screen and (min-width: 1440px) {
+    .bg {
+        background-color: transparent;
+        background-image: url(images/pattern-background-desktop.svg) !important;
+        background-size: cover;
+        background-position: center center; 
+        height: 60%;
+    }
+    .order {
+        width:450px;
+    }
+    .order-info p,
+    .order-btns,
+    .order-price
+    {
+        width: 70%;
+    }
+
+}
